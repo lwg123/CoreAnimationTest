@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClockTestViewController">
+            <connections>
+                <outlet property="hourImageView" destination="HIg-u5-cIY" id="nwh-hZ-FEq"/>
+                <outlet property="minImageView" destination="iMY-Yk-aaw" id="Fcr-Kx-Ecg"/>
+                <outlet property="secImageView" destination="hm4-73-CKc" id="88j-BS-peu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3l-Sw-ZDk">
+                    <rect key="frame" x="82" y="323" width="250" height="250"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-Sz-Tcg">
+                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour" translatesAutoresizingMaskIntoConstraints="NO" id="HIg-u5-cIY">
+                            <rect key="frame" x="115" y="75" width="20" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="4qK-h0-xep"/>
+                                <constraint firstAttribute="width" constant="20" id="nzL-P6-O1s"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="min" translatesAutoresizingMaskIntoConstraints="NO" id="iMY-Yk-aaw">
+                            <rect key="frame" x="115" y="75" width="20" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Fxp-ac-dRb"/>
+                                <constraint firstAttribute="width" constant="20" id="s3W-bU-E0O"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="hm4-73-CKc">
+                            <rect key="frame" x="115" y="75" width="20" height="100"/>
+                            <color key="backgroundColor" red="1" green="0.33725490200000002" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="JVl-kF-cN9"/>
+                                <constraint firstAttribute="width" constant="20" id="muE-9T-GkT"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="1x6-cY-kpJ"/>
+                        <constraint firstItem="hm4-73-CKc" firstAttribute="centerY" secondItem="F3l-Sw-ZDk" secondAttribute="centerY" id="2KF-Nh-P2g"/>
+                        <constraint firstItem="HIg-u5-cIY" firstAttribute="centerX" secondItem="F3l-Sw-ZDk" secondAttribute="centerX" id="8Zr-cc-oGP"/>
+                        <constraint firstItem="iMY-Yk-aaw" firstAttribute="centerY" secondItem="F3l-Sw-ZDk" secondAttribute="centerY" id="GPc-ol-clJ"/>
+                        <constraint firstItem="HIg-u5-cIY" firstAttribute="centerY" secondItem="F3l-Sw-ZDk" secondAttribute="centerY" id="VAN-4C-vgT"/>
+                        <constraint firstItem="hm4-73-CKc" firstAttribute="centerX" secondItem="F3l-Sw-ZDk" secondAttribute="centerX" id="YTb-Ja-IQD"/>
+                        <constraint firstItem="Awz-Sz-Tcg" firstAttribute="leading" secondItem="F3l-Sw-ZDk" secondAttribute="leading" id="YmN-DP-Y7R"/>
+                        <constraint firstAttribute="height" constant="250" id="ftX-Ie-IDI"/>
+                        <constraint firstItem="iMY-Yk-aaw" firstAttribute="centerX" secondItem="F3l-Sw-ZDk" secondAttribute="centerX" id="iSL-ae-WEF"/>
+                        <constraint firstItem="Awz-Sz-Tcg" firstAttribute="top" secondItem="F3l-Sw-ZDk" secondAttribute="top" id="jU7-3j-4UX"/>
+                        <constraint firstAttribute="bottom" secondItem="Awz-Sz-Tcg" secondAttribute="bottom" id="pdf-yd-JWe"/>
+                        <constraint firstAttribute="trailing" secondItem="Awz-Sz-Tcg" secondAttribute="trailing" id="ple-ks-nAc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="F3l-Sw-ZDk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4q0-Ja-mGG"/>
+                <constraint firstItem="F3l-Sw-ZDk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9SI-qS-eje"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clock" width="424" height="422"/>
+        <image name="hour" width="96" height="245"/>
+        <image name="min" width="77" height="216"/>
+        <image name="second" width="69" height="233"/>
+    </resources>
+</document>

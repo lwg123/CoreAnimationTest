@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1249D31241C78B20024E9AC /* ClockTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1249D2F241C78B20024E9AC /* ClockTestViewController.m */; };
+		D1249D32241C78B20024E9AC /* ClockTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1249D30241C78B20024E9AC /* ClockTestViewController.xib */; };
+		D1249D38241C82120024E9AC /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1249D36241C82120024E9AC /* HitTestViewController.m */; };
+		D1249D39241C82120024E9AC /* HitTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1249D37241C82120024E9AC /* HitTestViewController.xib */; };
+		D1AA4A09241F15BD00F90FD6 /* VisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AA4A08241F15BD00F90FD6 /* VisionViewController.m */; };
 		D1C0CB182419CBC300F853F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0CB172419CBC300F853F4 /* AppDelegate.m */; };
 		D1C0CB1B2419CBC300F853F4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0CB1A2419CBC300F853F4 /* SceneDelegate.m */; };
 		D1C0CB1E2419CBC300F853F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0CB1D2419CBC300F853F4 /* ViewController.m */; };
@@ -17,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1249D2E241C78B20024E9AC /* ClockTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockTestViewController.h; sourceTree = "<group>"; };
+		D1249D2F241C78B20024E9AC /* ClockTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockTestViewController.m; sourceTree = "<group>"; };
+		D1249D30241C78B20024E9AC /* ClockTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockTestViewController.xib; sourceTree = "<group>"; };
+		D1249D35241C82120024E9AC /* HitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
+		D1249D36241C82120024E9AC /* HitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
+		D1249D37241C82120024E9AC /* HitTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HitTestViewController.xib; sourceTree = "<group>"; };
+		D1AA4A07241F15BD00F90FD6 /* VisionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisionViewController.h; sourceTree = "<group>"; };
+		D1AA4A08241F15BD00F90FD6 /* VisionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisionViewController.m; sourceTree = "<group>"; };
 		D1C0CB132419CBC300F853F4 /* CoreAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C0CB162419CBC300F853F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1C0CB172419CBC300F853F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +55,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1249D33241C81C80024E9AC /* 锚点 */ = {
+			isa = PBXGroup;
+			children = (
+				D1249D2E241C78B20024E9AC /* ClockTestViewController.h */,
+				D1249D2F241C78B20024E9AC /* ClockTestViewController.m */,
+				D1249D30241C78B20024E9AC /* ClockTestViewController.xib */,
+			);
+			path = "锚点";
+			sourceTree = "<group>";
+		};
+		D1249D34241C81DA0024E9AC /* HitTesting */ = {
+			isa = PBXGroup;
+			children = (
+				D1249D35241C82120024E9AC /* HitTestViewController.h */,
+				D1249D36241C82120024E9AC /* HitTestViewController.m */,
+				D1249D37241C82120024E9AC /* HitTestViewController.xib */,
+			);
+			path = HitTesting;
+			sourceTree = "<group>";
+		};
+		D1249D3A241C8A9C0024E9AC /* 视觉效果 */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA4A07241F15BD00F90FD6 /* VisionViewController.h */,
+				D1AA4A08241F15BD00F90FD6 /* VisionViewController.m */,
+			);
+			path = "视觉效果";
+			sourceTree = "<group>";
+		};
 		D1C0CB0A2419CBC300F853F4 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +103,9 @@
 		D1C0CB152419CBC300F853F4 /* CoreAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
+				D1249D3A241C8A9C0024E9AC /* 视觉效果 */,
+				D1249D34241C81DA0024E9AC /* HitTesting */,
+				D1249D33241C81C80024E9AC /* 锚点 */,
 				D1C0CB162419CBC300F853F4 /* AppDelegate.h */,
 				D1C0CB172419CBC300F853F4 /* AppDelegate.m */,
 				D1C0CB192419CBC300F853F4 /* SceneDelegate.h */,
@@ -133,7 +178,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1249D39241C82120024E9AC /* HitTestViewController.xib in Resources */,
 				D1C0CB262419CBC500F853F4 /* LaunchScreen.storyboard in Resources */,
+				D1249D32241C78B20024E9AC /* ClockTestViewController.xib in Resources */,
 				D1C0CB232419CBC500F853F4 /* Assets.xcassets in Resources */,
 				D1C0CB212419CBC300F853F4 /* Main.storyboard in Resources */,
 			);
@@ -146,9 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1249D38241C82120024E9AC /* HitTestViewController.m in Sources */,
 				D1C0CB1E2419CBC300F853F4 /* ViewController.m in Sources */,
+				D1AA4A09241F15BD00F90FD6 /* VisionViewController.m in Sources */,
 				D1C0CB182419CBC300F853F4 /* AppDelegate.m in Sources */,
 				D1C0CB292419CBC500F853F4 /* main.m in Sources */,
+				D1249D31241C78B20024E9AC /* ClockTestViewController.m in Sources */,
 				D1C0CB1B2419CBC300F853F4 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
