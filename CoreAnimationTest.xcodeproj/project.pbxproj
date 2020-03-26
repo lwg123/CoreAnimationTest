@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11C340A2423492D0013AEE1 /* TransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C34092423492D0013AEE1 /* TransformViewController.m */; };
+		D11C340D24235A490013AEE1 /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C340C24235A490013AEE1 /* TransitionViewController.m */; };
+		D11C3411242364BE0013AEE1 /* LayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C3410242364BE0013AEE1 /* LayerViewController.m */; };
 		D1249D31241C78B20024E9AC /* ClockTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1249D2F241C78B20024E9AC /* ClockTestViewController.m */; };
 		D1249D32241C78B20024E9AC /* ClockTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1249D30241C78B20024E9AC /* ClockTestViewController.xib */; };
 		D1249D38241C82120024E9AC /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1249D36241C82120024E9AC /* HitTestViewController.m */; };
@@ -22,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D11C34082423492D0013AEE1 /* TransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformViewController.h; sourceTree = "<group>"; };
+		D11C34092423492D0013AEE1 /* TransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformViewController.m; sourceTree = "<group>"; };
+		D11C340B24235A490013AEE1 /* TransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
+		D11C340C24235A490013AEE1 /* TransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		D11C340F242364BE0013AEE1 /* LayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerViewController.h; sourceTree = "<group>"; };
+		D11C3410242364BE0013AEE1 /* LayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerViewController.m; sourceTree = "<group>"; };
 		D1249D2E241C78B20024E9AC /* ClockTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockTestViewController.h; sourceTree = "<group>"; };
 		D1249D2F241C78B20024E9AC /* ClockTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockTestViewController.m; sourceTree = "<group>"; };
 		D1249D30241C78B20024E9AC /* ClockTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockTestViewController.xib; sourceTree = "<group>"; };
@@ -55,6 +64,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D11C34062423462E0013AEE1 /* 转场动画（CATransition） */ = {
+			isa = PBXGroup;
+			children = (
+				D11C340B24235A490013AEE1 /* TransitionViewController.h */,
+				D11C340C24235A490013AEE1 /* TransitionViewController.m */,
+			);
+			path = "转场动画（CATransition）";
+			sourceTree = "<group>";
+		};
+		D11C3407242348FD0013AEE1 /* 变换 */ = {
+			isa = PBXGroup;
+			children = (
+				D11C34082423492D0013AEE1 /* TransformViewController.h */,
+				D11C34092423492D0013AEE1 /* TransformViewController.m */,
+			);
+			path = "变换";
+			sourceTree = "<group>";
+		};
+		D11C340E242362250013AEE1 /* 专用图层 */ = {
+			isa = PBXGroup;
+			children = (
+				D11C340F242364BE0013AEE1 /* LayerViewController.h */,
+				D11C3410242364BE0013AEE1 /* LayerViewController.m */,
+			);
+			path = "专用图层";
+			sourceTree = "<group>";
+		};
 		D1249D33241C81C80024E9AC /* 锚点 */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +139,9 @@
 		D1C0CB152419CBC300F853F4 /* CoreAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
+				D11C340E242362250013AEE1 /* 专用图层 */,
+				D11C3407242348FD0013AEE1 /* 变换 */,
+				D11C34062423462E0013AEE1 /* 转场动画（CATransition） */,
 				D1249D3A241C8A9C0024E9AC /* 视觉效果 */,
 				D1249D34241C81DA0024E9AC /* HitTesting */,
 				D1249D33241C81C80024E9AC /* 锚点 */,
@@ -197,9 +236,12 @@
 				D1C0CB1E2419CBC300F853F4 /* ViewController.m in Sources */,
 				D1AA4A09241F15BD00F90FD6 /* VisionViewController.m in Sources */,
 				D1C0CB182419CBC300F853F4 /* AppDelegate.m in Sources */,
+				D11C3411242364BE0013AEE1 /* LayerViewController.m in Sources */,
+				D11C340D24235A490013AEE1 /* TransitionViewController.m in Sources */,
 				D1C0CB292419CBC500F853F4 /* main.m in Sources */,
 				D1249D31241C78B20024E9AC /* ClockTestViewController.m in Sources */,
 				D1C0CB1B2419CBC300F853F4 /* SceneDelegate.m in Sources */,
+				D11C340A2423492D0013AEE1 /* TransformViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

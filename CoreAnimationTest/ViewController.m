@@ -10,13 +10,20 @@
 #import "ClockTestViewController.h"
 #import "HitTestViewController.h"
 #import "VisionViewController.h"
+#import "TransformViewController.h"
+#import "TransitionViewController.h"
+#import "LayerViewController.h"
 
-@interface ViewController ()<CALayerDelegate>
+
+static NSString *cellID = @"cellID";
+
+@interface ViewController ()<CALayerDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *layerView;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
 
-
+@property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) NSMutableArray *dataArray;
 @end
 
 @implementation ViewController
@@ -24,21 +31,87 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CALayer *blueLayer = [CALayer layer];
-    blueLayer.frame = CGRectMake(50, 50, 100, 100);
-    blueLayer.backgroundColor = [UIColor blueColor].CGColor;
-    blueLayer.delegate = self;
-    [self.layerView.layer addSublayer:blueLayer];
-   
-    [blueLayer display];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"图层",@"锚点",@"HitTesting",@"视觉效果",@"变换", @"转场动画",@"专用图层",nil];
+    
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.rowHeight = 50;
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    [self.view addSubview:_tableView];
+    
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    //ClockTestViewController *clockVC = [[ClockTestViewController alloc] init];
-   // HitTestViewController *hitTestVC = [[HitTestViewController alloc] init];
-    VisionViewController *visionVC = [[VisionViewController alloc] init];
-    [self.navigationController pushViewController:visionVC animated:YES];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+        case 1:
+        {
+            ClockTestViewController *clockVC = [[ClockTestViewController alloc] init];
+            [self.navigationController pushViewController:clockVC animated:YES];
+        }
+            break;
+        case 2:
+        {
+            HitTestViewController *hitTestVC = [[HitTestViewController alloc] init];
+            [self.navigationController pushViewController:hitTestVC animated:YES];
+        }
+            break;
+        case 3:
+        {
+            VisionViewController *visionVC = [[VisionViewController alloc] init];
+            [self.navigationController pushViewController:visionVC animated:YES];
+        }
+            break;
+        case 4:
+        {
+            TransformViewController *transformVC = [[TransformViewController alloc] init];
+            [self.navigationController pushViewController:transformVC animated:YES];
+        }
+            break;
+        case 5:
+        {
+            TransitionViewController *transitionVC = [[TransitionViewController alloc] init];
+            [self.navigationController pushViewController:transitionVC animated:YES];
+        }
+            break;
+        case 6:
+        {
+            LayerViewController *layerVC = [[LayerViewController alloc] init];
+            [self.navigationController pushViewController:layerVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+- (void)test3 {
+    
+     CALayer *blueLayer = [CALayer layer];
+     blueLayer.frame = CGRectMake(50, 50, 100, 100);
+     blueLayer.backgroundColor = [UIColor blueColor].CGColor;
+     blueLayer.delegate = self;
+     [self.layerView.layer addSublayer:blueLayer];
+    
+     [blueLayer display];
 }
 
 

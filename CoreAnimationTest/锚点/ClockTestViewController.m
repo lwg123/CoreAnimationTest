@@ -24,7 +24,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    // 调整anchorpoint
+    // 调整anchorpoint,这个地方是关键点，不然锚点在中心
     self.hourImageView.layer.anchorPoint = CGPointMake(0.5, 0.9);
     self.minImageView.layer.anchorPoint = CGPointMake(0.5, 0.9);
     self.secImageView.layer.anchorPoint = CGPointMake(0.5, 0.9);
