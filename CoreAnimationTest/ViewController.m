@@ -13,6 +13,7 @@
 #import "TransformViewController.h"
 #import "TransitionViewController.h"
 #import "LayerViewController.h"
+#import "TransactionViewController.h"
 
 
 static NSString *cellID = @"cellID";
@@ -31,7 +32,7 @@ static NSString *cellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArray = [NSMutableArray arrayWithObjects:@"图层",@"锚点",@"HitTesting",@"视觉效果",@"变换", @"转场动画",@"专用图层",nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"图层",@"锚点",@"HitTesting",@"视觉效果",@"变换", @"转场动画",@"专用图层",@"隐式动画",nil];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -96,6 +97,13 @@ static NSString *cellID = @"cellID";
             [self.navigationController pushViewController:layerVC animated:YES];
         }
             break;
+        case 7:
+        {
+            TransactionViewController *transactionVC = [[TransactionViewController alloc] init];
+            [self.navigationController pushViewController:transactionVC animated:YES];
+        }
+            break;
+            
             
         default:
             break;

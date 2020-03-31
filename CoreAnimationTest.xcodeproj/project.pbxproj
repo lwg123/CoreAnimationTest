@@ -14,6 +14,9 @@
 		D1249D32241C78B20024E9AC /* ClockTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1249D30241C78B20024E9AC /* ClockTestViewController.xib */; };
 		D1249D38241C82120024E9AC /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1249D36241C82120024E9AC /* HitTestViewController.m */; };
 		D1249D39241C82120024E9AC /* HitTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1249D37241C82120024E9AC /* HitTestViewController.xib */; };
+		D1439AF6242DFBF8009639E4 /* UIView+ShadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D1439AF5242DFBF8009639E4 /* UIView+ShadowPath.m */; };
+		D1439AFF242E0089009639E4 /* MDLearningProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1439AFE242E0089009639E4 /* MDLearningProgressView.m */; };
+		D17E84FE2432DB7D00101BEB /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D17E84FD2432DB7D00101BEB /* TransactionViewController.m */; };
 		D1AA4A09241F15BD00F90FD6 /* VisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AA4A08241F15BD00F90FD6 /* VisionViewController.m */; };
 		D1C0CB182419CBC300F853F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0CB172419CBC300F853F4 /* AppDelegate.m */; };
 		D1C0CB1B2419CBC300F853F4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0CB1A2419CBC300F853F4 /* SceneDelegate.m */; };
@@ -37,6 +40,12 @@
 		D1249D35241C82120024E9AC /* HitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
 		D1249D36241C82120024E9AC /* HitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
 		D1249D37241C82120024E9AC /* HitTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HitTestViewController.xib; sourceTree = "<group>"; };
+		D1439AF4242DFBF8009639E4 /* UIView+ShadowPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ShadowPath.h"; sourceTree = "<group>"; };
+		D1439AF5242DFBF8009639E4 /* UIView+ShadowPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShadowPath.m"; sourceTree = "<group>"; };
+		D1439AFD242E0089009639E4 /* MDLearningProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDLearningProgressView.h; sourceTree = "<group>"; };
+		D1439AFE242E0089009639E4 /* MDLearningProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDLearningProgressView.m; sourceTree = "<group>"; };
+		D17E84FC2432DB7D00101BEB /* TransactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
+		D17E84FD2432DB7D00101BEB /* TransactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionViewController.m; sourceTree = "<group>"; };
 		D1AA4A07241F15BD00F90FD6 /* VisionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisionViewController.h; sourceTree = "<group>"; };
 		D1AA4A08241F15BD00F90FD6 /* VisionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisionViewController.m; sourceTree = "<group>"; };
 		D1C0CB132419CBC300F853F4 /* CoreAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,10 +123,23 @@
 		D1249D3A241C8A9C0024E9AC /* 视觉效果 */ = {
 			isa = PBXGroup;
 			children = (
+				D1439AFD242E0089009639E4 /* MDLearningProgressView.h */,
+				D1439AFE242E0089009639E4 /* MDLearningProgressView.m */,
 				D1AA4A07241F15BD00F90FD6 /* VisionViewController.h */,
 				D1AA4A08241F15BD00F90FD6 /* VisionViewController.m */,
+				D1439AF4242DFBF8009639E4 /* UIView+ShadowPath.h */,
+				D1439AF5242DFBF8009639E4 /* UIView+ShadowPath.m */,
 			);
 			path = "视觉效果";
+			sourceTree = "<group>";
+		};
+		D17E84FB2432DAEB00101BEB /* 隐式动画 */ = {
+			isa = PBXGroup;
+			children = (
+				D17E84FC2432DB7D00101BEB /* TransactionViewController.h */,
+				D17E84FD2432DB7D00101BEB /* TransactionViewController.m */,
+			);
+			path = "隐式动画";
 			sourceTree = "<group>";
 		};
 		D1C0CB0A2419CBC300F853F4 = {
@@ -139,6 +161,7 @@
 		D1C0CB152419CBC300F853F4 /* CoreAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
+				D17E84FB2432DAEB00101BEB /* 隐式动画 */,
 				D11C340E242362250013AEE1 /* 专用图层 */,
 				D11C3407242348FD0013AEE1 /* 变换 */,
 				D11C34062423462E0013AEE1 /* 转场动画（CATransition） */,
@@ -236,11 +259,14 @@
 				D1C0CB1E2419CBC300F853F4 /* ViewController.m in Sources */,
 				D1AA4A09241F15BD00F90FD6 /* VisionViewController.m in Sources */,
 				D1C0CB182419CBC300F853F4 /* AppDelegate.m in Sources */,
+				D1439AFF242E0089009639E4 /* MDLearningProgressView.m in Sources */,
 				D11C3411242364BE0013AEE1 /* LayerViewController.m in Sources */,
+				D17E84FE2432DB7D00101BEB /* TransactionViewController.m in Sources */,
 				D11C340D24235A490013AEE1 /* TransitionViewController.m in Sources */,
 				D1C0CB292419CBC500F853F4 /* main.m in Sources */,
 				D1249D31241C78B20024E9AC /* ClockTestViewController.m in Sources */,
 				D1C0CB1B2419CBC300F853F4 /* SceneDelegate.m in Sources */,
+				D1439AF6242DFBF8009639E4 /* UIView+ShadowPath.m in Sources */,
 				D11C340A2423492D0013AEE1 /* TransformViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

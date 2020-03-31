@@ -7,10 +7,13 @@
 //
 
 #import "VisionViewController.h"
+#import "UIView+ShadowPath.h"
+#import "MDLearningProgressView.h"
 
 @interface VisionViewController ()
 
 @property (nonatomic,strong) UIImageView *imageView;
+@property (nonatomic ,strong) UIView *shaowView;
 
 @end
 
@@ -21,8 +24,18 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self test1];
+    [self test2];
 }
+
+
+// 给一个view设置阴影
+- (void)test2 {
+    //[self shaowView];
+    
+    MDLearningProgressView *header = [[MDLearningProgressView alloc] initWithFrame:CGRectMake(0, 100, 400, 210) progress:0.7 averageProgress:1.0];
+    [self.view addSubview:header];
+}
+
 
 
 /**

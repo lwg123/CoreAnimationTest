@@ -33,10 +33,43 @@
     self.containerView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:self.containerView];
     
-    [self test];
+    [self test3];
 }
 
-// 创建一个CGPath
+
+
+// CATextLayer来显示一些文字
+- (void)test3 {
+    //create a text layer
+    CATextLayer *textLayer = [CATextLayer layer];
+    textLayer.frame = self.containerView.bounds;
+    textLayer.contentsScale = [UIScreen mainScreen].scale;
+    [self.containerView.layer addSublayer:textLayer];
+    
+    //set text attributes
+    textLayer.foregroundColor = [UIColor blackColor].CGColor;
+    textLayer.alignmentMode = kCAAlignmentJustified;
+    textLayer.wrapped = YES;
+    
+    //choose a font
+    UIFont *font = [UIFont systemFontOfSize:15];
+    
+    //set layer font
+    CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+    CGFontRef fontRef = CGFontCreateWithFontName(fontName);
+    textLayer.font = fontRef;
+    textLayer.fontSize = font.pointSize;
+    CGFontRelease(fontRef);
+    
+    //choose some text
+    NSString *text = @"Lorem ipsum dolor sit amet, consectetur adipiscing \ elit. Quisque massa arcu, eleifend vel varius in, facilisis pulvinar \ leo. Nunc quis nunc at mauris pharetra condimentum ut ac neque. Nunc elementum, libero ut porttitor dictum, diam odio congue lacus, vel \ fringilla sapien diam at purus. Etiam suscipit pretium nunc sit amet \ lobortis";
+    //set layer text
+    textLayer.string = text;
+    
+}
+
+
+// CAShapeLayer 创建一个CGPath
 - (void)test {
     UIBezierPath *path = [[UIBezierPath alloc] init];
     //设置起点
@@ -60,12 +93,25 @@
     shapeLayer.strokeColor = [UIColor redColor].CGColor;
     shapeLayer.fillColor = [UIColor clearColor].CGColor;
     shapeLayer.lineWidth = 5;
-    shapeLayer.lineJoin = kCALineJoinRound;
-    shapeLayer.lineCap = kCALineCapRound;
+    shapeLayer.lineJoin = kCALineJoinRound; //连接处
+    shapeLayer.lineCap = kCALineCapRound;  // 末尾处
     shapeLayer.path = path.CGPath;
     
     [self.containerView.layer addSublayer:shapeLayer];
 }
+
+
+// 绘制具有3个圆角的矩形
+- (void)test2 {
+    //define path parameters
+    CGRect rect = CGRectMake(50, 50, 100, 100);
+    CGSize radii = CGSizeMake(20, 20);
+    UIRectCorner corners = UIRectCornerTopRight | UIRectCornerBottomRight | UIRectCornerBottomLeft;
+    //create path
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:radii];
+}
+
+
 
 
 
