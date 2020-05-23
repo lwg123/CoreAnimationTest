@@ -25,6 +25,7 @@
 		D1C0CB232419CBC500F853F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C0CB222419CBC500F853F4 /* Assets.xcassets */; };
 		D1C0CB262419CBC500F853F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C0CB242419CBC500F853F4 /* LaunchScreen.storyboard */; };
 		D1C0CB292419CBC500F853F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0CB282419CBC500F853F4 /* main.m */; };
+		D1DD5CE12445550600EAE131 /* CAAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DD5CE02445550600EAE131 /* CAAnimationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		D1C0CB252419CBC500F853F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1C0CB272419CBC500F853F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1C0CB282419CBC500F853F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D1DD5CDF2445550600EAE131 /* CAAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAnimationViewController.h; sourceTree = "<group>"; };
+		D1DD5CE02445550600EAE131 /* CAAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAAnimationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 		D1C0CB152419CBC300F853F4 /* CoreAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
+				D1DD5CDE244554DF00EAE131 /* 显式动画 */,
 				D17E84FB2432DAEB00101BEB /* 隐式动画 */,
 				D11C340E242362250013AEE1 /* 专用图层 */,
 				D11C3407242348FD0013AEE1 /* 变换 */,
@@ -181,6 +185,15 @@
 				D1C0CB282419CBC500F853F4 /* main.m */,
 			);
 			path = CoreAnimationTest;
+			sourceTree = "<group>";
+		};
+		D1DD5CDE244554DF00EAE131 /* 显式动画 */ = {
+			isa = PBXGroup;
+			children = (
+				D1DD5CDF2445550600EAE131 /* CAAnimationViewController.h */,
+				D1DD5CE02445550600EAE131 /* CAAnimationViewController.m */,
+			);
+			path = "显式动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 				D1AA4A09241F15BD00F90FD6 /* VisionViewController.m in Sources */,
 				D1C0CB182419CBC300F853F4 /* AppDelegate.m in Sources */,
 				D1439AFF242E0089009639E4 /* MDLearningProgressView.m in Sources */,
+				D1DD5CE12445550600EAE131 /* CAAnimationViewController.m in Sources */,
 				D11C3411242364BE0013AEE1 /* LayerViewController.m in Sources */,
 				D17E84FE2432DB7D00101BEB /* TransactionViewController.m in Sources */,
 				D11C340D24235A490013AEE1 /* TransitionViewController.m in Sources */,

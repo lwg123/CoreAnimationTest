@@ -31,17 +31,35 @@
     [self.containerView.layer addSublayer:self.colorLayer];
     
     // 修改动画的actions可以创建一个行为
-    CATransition *transition = [CATransition animation];
-    transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromLeft;
-    self.colorLayer.actions = @{@"backgroundColor" : transition};
+//    CATransition *transition = [CATransition animation];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromLeft;
+//    self.colorLayer.actions = @{@"backgroundColor" : transition};
     
 }
 
-
+// 使用presentationLayer图层来判断当前图层位置
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self changeColor];
+    //[self changeColor];
+    
+    //get the touch point
+    CGPoint point = [[touches anyObject] locationInView:self.view];
+    //check if we've tapped the moving layer
+    if ([self.colorLayer.presentationLayer hitTest:point]) {
+        //randomize the layer background color
+        CGFloat red = arc4random() / (CGFloat)INT_MAX;
+        CGFloat green = arc4random() / (CGFloat)INT_MAX;
+        CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+        self.colorLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0].CGColor;
+    }else {
+         //otherwise (slowly) move the layer to new position
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:4.0];
+        self.colorLayer.position = point;
+        [CATransaction commit];
+    }
+    
 }
 
 
@@ -87,6 +105,9 @@
     self.colorLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0].CGColor;
     [CATransaction commit];
 }
+
+
+
 
 
 @end
